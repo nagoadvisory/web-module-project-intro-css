@@ -3,17 +3,17 @@
 Once your repository is set up, practice what you learned today to style the site according to the given design. Your complete project should look similar to the desktop image. You should take the following actions, at a minimum:
 
 - [x] Link your CSS stylesheet in the `index.html` and implement a CSS reset 
-- [ ] Markup html semantically, such that it can be styled according to the given desktop image
-- [ ] Color the background of items in the navigation bar and footer with the following colors:
-  - [ ] Plan your Visit: `#FF764E`
-  - [ ] Learn About the Park: `#5ED3EB`
-  - [ ] Get Involved: `#FFCD69`
+- [x] Markup html semantically, such that it can be styled according to the given desktop image
+- [x] Color the background of items in the navigation bar and footer with the following colors:
+  - [x] Plan your Visit: `#FF764E`
+  - [x] Learn About the Park: `#5ED3EB`
+  - [x] Get Involved: `#FFCD69`
 - [x] Change all font colors and styles according to design file
   - [x] Yosemite Park Guide font is called Chelsea Market and can be found on [google fonts](https://fonts.google.com/specimen/Chelsea+Market)
   - [x] All other text is Roboto Mono, also available on [google fonts](https://fonts.google.com/specimen/Roboto+Mono)
 - [x] Color the background of the main text body with `#DDB9A3`
 - [x] Color the background of the footer with `#F9E7DC`
-- [ ] Bold the words "current fire restrictions" and "park entrance fee" according to the design file
+- [x] Bold the words "current fire restrictions" and "park entrance fee" according to the design file
 - [ ] Apply box model properties (content, padding, margin, and border) to all content such that your webpage matches the design file. This will include at least:
   - [ ] A round image in the header
   - [ ] Round corners on navigation and footer items
@@ -25,211 +25,176 @@ Once your repository is set up, practice what you learned today to style the sit
 */
 
 /* CSS Reset */
+        html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+        del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+        dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+            vertical-align: baseline;
+            font-family: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+            font-size: 100%;
+            outline: 0;
+            padding: 0;
+            margin: 0;
+            /* border: 0; removed due to Instructor preferences*/
+            }
+        /* remember to define focus styles! */
+        :focus {
+            outline: 0;
+            }
+        /*removed per Brit instructions     
+        body {
+            background: white;
+            line-height: 1;
+            color: black;
+            } */
 
-    /* Box sizing rules */
-    *,
-    *::before,
-    *::after {
-    box-sizing: border-box;
-    }
+        ol, ul {
+            list-style: none;
+            }
+        /* tables still need cellspacing="0" in the markup */
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            }
+        caption, th, td {
+            font-weight: normal;
+            text-align: left;
+            }
+        /* remove possible quote marks (") from <q> & <blockquote> */
+        blockquote:before, blockquote:after, q:before, q:after {
+            content: "";
+            }
+        blockquote, q {
+            quotes: "" "";
+            }
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            max-width: 100%
+        } /* <-- this last piece Brit Hemming Preferred Start */
 
-    /* Remove default margin */
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    figure,
-    blockquote,
-    dl,
-    dd {
-    margin: 0;
-    }
 
-    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    ul[role='list'],
-    ol[role='list'] {
-    list-style: none;
-    }
-
-    /* Set core root defaults */
-    html:focus-within {
-    scroll-behavior: smooth;
-    }
-
-    /* Set core body defaults */
-    body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    }
-
-    /* A elements that don't have a class get default styles */
-    a:not([class]) {
-    text-decoration-skip-ink: auto;
-    }
-
-    /* Make images easier to work with */
-    img,
-    picture {
-    max-width: 100%;
-    display: block;
-    }
-
-    /* Inherit fonts for inputs and buttons */
-    input,
-    button,
-    textarea,
-    select {
-    font: inherit;
-    }
-
-    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-    @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-    scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-    }
-/* End of Reset */
-
-/* Brit Hemming Preferred Start */
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: 100%
-}
-
-/* Setting standard font-size applied to all websites per Brit Hemming */
+/* General Styles per Brit Hemming */
 html{
     font-size:62.5%;
 }
 
-body{
-    font-size:1.6rem;
-    line-height: 1.5px;
-
-}
-
-
-/* Making all font text Roboto, will exclude Yosemite Park Guide after */
-
 body {
+    font-size: 1.6rem;
+    line-height: 1.5;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
+    color: #4f4f4f;
+    margin: 10px;
 }
 
-.bigtextblock {
+h1 {
+    font-size: 30px;
     font-family: 'Chelsea Market', cursive;
-    border: orangered 10px solid;
 }
+
+a {
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+section{
+    padding:4% 0;
+}
+
+
 /* finished fonts */
 
-.navcontainer {
+/* Header */
+/* .navcontainer {
     border: goldenrod 10px solid;
-    margin: auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
+} */
 nav {
-    display:inline-flex;
-    align-content:space-around;
-    justify-content: space-around;
-    padding: 2% 0;
-    flex-direction: row;
     width: 100%;
-    flex-wrap: nowrap;
-    border: turquoise 10px solid;
+    margin: 5%;
 
 }
+nav a{
+    display:inline-block;
+    margin-left: 5%;
+    Margin-right: 5%;
+    min-width: 130px;
+    width: 10%;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Color the background of items in the navigation bar and footer with the following colors: */
+.orange {
+    background-color: #FF764E;
+}
 
-.navcontainer nav a{
-    justify-content:space-evenly;
+.blue {
+    background-color: #5ED3EB;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+.yellow {
+    background-color: #FFCD69;
+}
+/*End Header*/
+
+/* Picture and Title */
+.titles {
+    text-align: center;
+    position: relative;
+    border: green 10px solid;
+}
+
+.left, .right {
     display: inline-block;
-    margin: 0 10px;
-    padding: 2% 0;
-    border: black 10px solid;
-    min-width: 16.66667%;
-    max-width: 100%;
-    border-radius: 20px;
-
 }
 
-/*nav padding: 2% 0: */ 
-
-
-
-.bigtextblock {
-    display: flex;
+.left {
+    width:30%;
+    margin-left:5%
 }
 
-.bigtextblock {
-    margin: 20px;
+.left img {
+    border-radius: 50%;
+}
+
+.right {
+    width: 55%;
+    margin-left: 5%
+}
+
+.right div{
+    position: absolute;
+    top: 15%;
+    padding-right: 5%;
+    border: green 1px solid;
+
 }
 
 /* to color the block peach */
 .pinkblock {
     background-color: #DDB9A3;
     padding: 1em;
-    margin: 20px;
+    margin: 0 20px;
     color: white;
-    max-width: 80%;
-}
-
-
-
-/*
-.navcontainer nav a {
-    margin: 0 10px;
-    border: 1px solid lightgray;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 20px;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
-*/
-
-/* Color the background of items in the navigation bar and footer with the following colors: */
-div.buttonone {
-    background-color: #FF764E;
-    border-radius: 20px;
-    
-}
-
-div.buttontwo {
-    background-color: #5ED3EB;
-    border-radius: 20px;
-}
-
-div.buttonthree {
-    background-color: #FFCD69;
-    border-radius: 20px;
-}
-
-/* Color the footer */
-footer {
-    background-color: #F9E7DC;
 }
 
 /* Isolating icons with paragraphs */
 .fire   {
     border: blue 10px solid;
+    display: inline-block;
     justify-content: center;
-    flex-direction: column;
     align-content: center;
 }
 
@@ -239,26 +204,23 @@ footer {
 
 .fire p, .reservations p {
     border: red 10px solid;
-    max-width: 25%;
+    max-width: 40%;
+    display: block;
+    margin: 0 30%;
 }
 
 /*shrinking picture size */
 .fire img, .reservations img {
-    max-width: 10%;
+    max-width: 20%;
     max-height: auto%;
 }
 
 
-/* shrinking footer */
-
+/* Footer */
 #footerimage {
-    border: black 10px solid;
-    max-height: 10%;
-    max-width: 100%;
-}
+    width: 100%;
+    height: 200px;
+    background-image: url("assets/footer_img.jpg");
+    background-size: 100% 100%;
 
-/*shrinking header */
-.headerimage {
-    border: black 10px solid;
-    border-radius: 100%;
 }
