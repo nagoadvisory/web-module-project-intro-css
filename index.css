@@ -92,7 +92,7 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 32px;
     font-family: 'Chelsea Market', cursive;
 }
 
@@ -113,12 +113,12 @@ section{
 /* finished fonts */
 
 /* Header */
-/* .navcontainer {
-    border: goldenrod 10px solid;
-} */
+.navcontainer {
+    /* border: goldenrod 10px solid; */
+}
 nav {
     width: 100%;
-    margin: 5%;
+    margin: 5% 1%;
 
 }
 nav a{
@@ -153,7 +153,7 @@ nav a{
 .titles {
     text-align: center;
     position: relative;
-    border: green 10px solid;
+    /* border: green 10px solid; */
 }
 
 .left, .right {
@@ -162,7 +162,6 @@ nav a{
 
 .left {
     width:30%;
-    margin-left:5%
 }
 
 .left img {
@@ -177,8 +176,8 @@ nav a{
 .right div{
     position: absolute;
     top: 15%;
-    padding-right: 5%;
-    border: green 1px solid;
+    margin-right: 5%;
+    /* border: green 1px solid; */
 
 }
 
@@ -192,18 +191,18 @@ nav a{
 
 /* Isolating icons with paragraphs */
 .fire   {
-    border: blue 10px solid;
+    /* border: blue 10px solid; */
     display: inline-block;
     justify-content: center;
     align-content: center;
 }
 
 .reservations   {
-    border: red 10px solid;
+    /* border: red 10px solid; */
 }
 
 .fire p, .reservations p {
-    border: red 10px solid;
+    /* border: red 10px solid; */
     max-width: 40%;
     display: block;
     margin: 0 30%;
